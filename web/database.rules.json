@@ -1,0 +1,45 @@
+{
+  "rules": {
+    // デフォルトで全て禁止
+    ".read": false,
+    ".write": false,
+    "admin-users": {
+      ".read": "auth != null && root.child('admin-users').child(auth.uid).exists()",
+      ".write": "auth != null && root.child('admin-users').child(auth.uid).exists()"
+    },
+    "users": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$userId": {
+        ".validate": "newData.hasChildren(['user_id', 'access_token', 'github_username'])",
+        ".indexOn": ["user_id"]
+      }
+    },
+    "artifacts": {
+      ".read": "auth != null && root.child('admin-users').child(auth.uid).exists()",
+      "$repoId": {
+        ".read": "auth != null && root.child('repositories').child($repoId).child('configured_users').child(auth.uid).exists()", // TODO artifacts_visibility
+        "$buildNum": {
+          ".write": "auth != null"
+        }
+      }
+    },
+    "repositories": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$repoId": {
+        ".validate": "newData.hasChildren(['repository_full_name', 'artifacts_visibility'])",
+        "artifacts_visibility": {
+          ".validate": "newData.isString() && (newData.val() === 'private' || newData.val() === 'public')"
+        }
+      }
+    },
+    "posts": {
+       ".read": true,
+       ".write": "auth != null && root.child('admin-users').child(auth.uid).exists()",
+       "$postId": {
+         ".validate": "newData.hasChildren(['updated_at', 'updated_by', 'body'])"
+       }
+    }
+  }
+}

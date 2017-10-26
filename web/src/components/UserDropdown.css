@@ -1,0 +1,55 @@
+.UserDropdown {
+  overflow: visible;
+  height: 100%;
+}
+
+.UserDropdown header img {
+  width: 2em;
+  height: 2em;
+  border-radius: 999px;
+  margin-left: 1em;
+}
+
+.UserDropdown header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.UserDropdown header .title {
+  margin: 0 1em 0 0.7em;
+  font-size: 90%;
+}
+
+.UserDropdown header:hover ul {
+  display: block;
+}
+
+.UserDropdown:hover>ul {
+  display: block;
+}
+
+.UserDropdown>ul {
+  display: none;
+  background: white;
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.12);
+  position: absolute;
+  width: 8em;
+  box-sizing: border-box;
+  font-size: 90%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.UserDropdown>header:hover {
+  background: #f7f7f7;
+}
+
+.UserDropdown>ul li {
+  padding: 1em;
+  cursor: pointer;
+}
+
+.UserDropdown>ul li:hover {
+  background: #f7f7f7;
+}

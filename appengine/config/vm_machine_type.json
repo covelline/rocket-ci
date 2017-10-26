@@ -1,0 +1,14 @@
+{
+ "kind": "compute#machineType",
+ "id": "3008",
+ "creationTimestamp": "2015-01-16T09:25:43.316-08:00",
+ "name": "n1-standard-16",
+ "description": "16 vCPUs, 30 GB RAM",
+ "guestCpus": 16,
+ "memoryMb": 30720,
+ "maximumPersistentDisks": 128,
+ "maximumPersistentDisksSizeGb": "65536",
+ "zone": "asia-east1-a",
+ "selfLink": "https://content.googleapis.com/compute/v1/projects/rocket-ci/zones/asia-east1-a/machineTypes/n1-standard-8",
+ "isSharedCpu": false
+}

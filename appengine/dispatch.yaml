@@ -1,0 +1,3 @@
+dispatch:
+  - url: "payment.rocket-ci.com/"
+    module: payment

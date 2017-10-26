@@ -1,0 +1,4 @@
+def ssh_config(ssh)
+  ssh.username = "username" #your user name
+  ssh.private_key_path = "~/.ssh/google_compute_engine" # your ssh private key path
+end

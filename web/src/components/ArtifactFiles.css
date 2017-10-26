@@ -1,0 +1,31 @@
+.ArtifactFile.directory>.name::before {
+  content: "";
+  display: inline-block;
+  margin-right: 1em;
+  color: rgba(0, 0, 0, 0.39);
+  font-family: monospace;
+}
+
+.ArtifactFile.directory.closed>.name::before {
+  content: "+";
+}
+
+.ArtifactFile.directory.opened>.name::before {
+  content: "-";
+}
+
+.ArtifactFile .children {
+  padding-left: 2em;
+}
+
+.ArtifactFile.directory>.name {
+  color: rgba(0, 0, 0, 0.43);
+}
+
+.ArtifactFile>.name {
+  cursor: pointer;
+}
+
+.ArtifactFile.closed .children {
+  display: none;
+}

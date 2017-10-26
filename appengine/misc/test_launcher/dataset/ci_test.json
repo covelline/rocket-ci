@@ -1,0 +1,36 @@
+[
+  {
+    "description": "成功するビルドのテストです。 ビルドが成功することを確認してください。",
+    "repo_id": 71760510,
+    "event": "pull_request",
+    "action": "synchronize",
+    "full_name": "covelline/rocket-ci-private-test",
+    "number": 1
+  },
+  {
+    "description": "失敗するビルドのテストです。ビルドが失敗することを確認してください。",
+    "repo_id": 71760510,
+    "event": "pull_request",
+    "action": "synchronize",
+    "full_name": "covelline/rocket-ci-private-test",
+    "number": 2
+  },
+  {
+    "description": "リトライのテストです。 ビルド番号が増えていないことを確認してください。",
+    "repo_id": 71760510,
+    "event": "retry",
+    "action": "synchronize",
+    "full_name": "covelline/rocket-ci-private-test",
+    "build_number": 25,
+    "number": 3
+  },
+  {
+    "description": "retest this please で起動するかのテストです。テストが成功することを確認してください。",
+    "repo_id": 71760510,
+    "event": "issue_comment",
+    "action": "created",
+    "full_name": "covelline/rocket-ci-private-test",
+    "comment": "retest this please",
+    "number": 3
+  }
+]

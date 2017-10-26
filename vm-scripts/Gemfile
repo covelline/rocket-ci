@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+source 'https://rubygems.org'
+
+gem 'rake'
+gem 'docker-api', '1.32.0'
+gem 'sshkey', '1.8.0'
+gem 'google-cloud', '0.20.0'
+gem 'sys-filesystem', '1.1.7'
+
+group :test do
+  gem 'test-unit'
+  gem 'webmock'
+end

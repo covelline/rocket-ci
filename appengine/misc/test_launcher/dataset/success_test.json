@@ -1,0 +1,10 @@
+[
+  {
+    "description": "成功するビルドのテストです。 ビルドが成功することを確認してください。",
+    "repo_id": 71760510,
+    "event": "pull_request",
+    "action": "synchronize",
+    "full_name": "covelline/rocket-ci-private-test",
+    "number": 1
+  }
+]

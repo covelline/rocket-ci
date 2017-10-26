@@ -1,0 +1,32 @@
+{
+  "name": "payment",
+  "description": "支払い関係のAPI",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Covelline Closed",
+  "author": "covelline,llc",
+  "scripts": {
+    "start": "node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "./deploy.sh",
+    "lint": "eslint **/*.js",
+    "test": "DISABLE_CLOUD_LOGGING='' FIREBASE_DATABASE_URL='ws://127.0.1:5000' mocha --timeout 10000 --recursive",
+    "watch:test": "DISABLE_CLOUD_LOGGING='' FIREBASE_DATABASE_URL='ws://127.0.1:5000' mocha --watch --timeout 10000 --recursive"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "firebase": "^3.6.2",
+    "knex": "^0.12.6",
+    "lodash": "^4.17.2",
+    "mysql": "^2.12.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "mysql": "^2.12.0",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "mocha": "^3.2.0"
+  }
+}

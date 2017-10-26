@@ -1,0 +1,42 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+require "./config/ssh.rb"
+
+script = <<EOF
+  chmod +x /vagrant/startup.rb
+  chmod +x /vagrant/shutdown.rb
+EOF
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "gce"
+
+  config.vm.provider :google do |google, override|
+    google.google_project_id = "rocket-ci"
+    google.google_client_email = "virtualmachine-startup-script"
+    google.google_json_key_location = "./cred/rocket-ci-7a179946404e.json"
+
+    google.zone = "asia-east1-a"
+    google.machine_type = "n1-highcpu-16"
+    google.zone_config "asia-east1-a" do |zone|
+      zone.image = "android-builder-sdkr24-ndkr12b-1479717553"
+      # zone.image = "ubuntu-1510-wily-v20160627"
+      zone.metadata = {
+        "repository_id" => 69561018,
+        "pull_request_html_url" => "https://github.com/numa08/rocket_ci_test/pull/3",
+        "build_number" => 128,
+        "cache_bucket" => "rocket-ci.appspot.com",
+        "traffic_limit_mb" => 500
+        #"shutdown-script" => "/vagrant/shutdown.rb"
+        #"startup-script" => "/vagrant/startup.rb D"
+      }
+      zone.disk_size = "60"
+      zone.auto_restart = false
+      zone.preemptible = true
+      zone.on_host_maintenance = "TERMINATE"
+    end
+
+    ssh_config(override.ssh)
+  end
+
+  config.vm.provision "shell", inline: script
+end

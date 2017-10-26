@@ -1,0 +1,56 @@
+@media screen and (max-width: 767px) {
+
+  .Header .menu {
+    position: absolute;
+    top: 4em;
+    height: auto;
+    width: 100% !important;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .Header .menu li {
+    float: none;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .Header {
+    position: absolute;
+  }
+
+  .App {
+    padding-top: 5em;
+  }
+
+  .Header .menu>li a {
+    padding: 0.4em 1.4em;
+  }
+
+  .BuildsPage .left {
+    width: 100% !important;
+    border: none;
+    max-height: 12em;
+    overflow-y: auto;
+    padding: 0.6em 0;
+    border-right: none !important;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.13);
+  }
+
+  .BuildsPage>.container {
+    display: block !important;
+  }
+
+  .BuildsPage .RepoItems li {
+    padding: 0.2em 0em;
+  }
+
+  .BuildsPage .right {
+    width: 100% !important;
+    padding: 1em 0 !important;
+  }
+}

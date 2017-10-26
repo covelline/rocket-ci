@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "rocket-ci",
+    "development": "rocket-ci-development",
+    "staging": "rocket-ci-staging"
+  }
+}

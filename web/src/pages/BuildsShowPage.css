@@ -1,0 +1,61 @@
+.BuildsShowPage .build-title h2 {
+  font-size: 250%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.BuildsShowPage .build-title .BuildStatus {
+  vertical-align: middle;
+  margin-left: 1em;
+}
+
+.BuildsShowPage .react-tabs [role=tablist] {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.BuildsShowPage .react-tabs [role=tab][aria-selected=true] {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: rgb(0, 0, 0);
+}
+
+.BuildsShowPage .react-tabs [role=tab] {
+  color: rgba(0, 0, 0, 0.51);
+}
+
+.BuildsShowPage .build-description {
+  margin-bottom: 2em;
+}
+
+.BuildsShowPage .build-description>p {
+  display: inline-block;
+  margin: 0 1em 0 0;
+}
+
+.BuildsShowPage .build-description>p.hash {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.BuildsShowPage .build-description .label {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.BuildsShowPage .back-button {
+  float: left;
+  font-size: 1.5em;
+  top: 3.3em;
+  position: absolute;
+  left: -2em;
+  margin-right: 0.5em;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.BuildsShowPage .back-button:hover {
+  opacity: 1;
+}
+
+#content>div.BuildsShowPage {
+  position: relative;
+  overflow: visible;  /* back-button を領域外に表示する */
+}

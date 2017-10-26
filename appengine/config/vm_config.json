@@ -1,0 +1,22 @@
+{
+    "disks": [{
+        "boot": true,
+        "autoDelete": true,
+        "initializeParams": {
+            "sourceImage": "projects/rocket-ci/global/images/android-builder-sdkr24-ndkr12b-1480320160",
+            "diskType": "projects/rocket-ci/zones/us-central1-a/diskTypes/pd-standard",
+            "diskSizeGb": "60",
+            "diskName": ""
+        }
+    }],
+    "networkInterfaces": [{
+        "network": "projects/rocket-ci/global/networks/default",
+        "accessConfigs": [{
+            "name": "External NAT",
+            "type": "ONE_TO_ONE_NAT"
+        }]
+    }],
+    "scheduling": {
+        "preemptible": true
+    }
+}

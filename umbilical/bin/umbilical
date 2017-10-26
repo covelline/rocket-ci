@@ -1,0 +1,69 @@
+#!/usr/bin/env node
+/*jslint es6 */
+const package = require("../package.json")
+const program = require("commander")
+
+const database = require("../lib/database")
+const build_number = require("../lib/build-number")
+
+program.version(package.version)
+
+program
+  .command("build-number")
+  .description(`ビルド番号の取得・インクリメントを行う.
+
+  # 最新のビルド番号を取得
+  umbilical build-number --repo_id 1234
+
+  # ビルド番号をインクリメント(アトミックに行われる)
+  umbilical build-number --repo_id 1234 --increment
+    `)
+  .option("--increment", "インクリメントする")
+  .option("--repo_id <name>", "リポジトリの ID", parseInt)
+  .option("--key_file_path <path>", "firebase の service account の key file へのパス")
+  .action( (options) => {
+    build_number.exec(options)
+  })
+
+program
+  .command("database")
+  .description(`指定されたパスの Realtime Dabase のデータを操作するためのコマンド.
+    データの閲覧、追加、更新を行うことができます.
+
+
+    # 成果物を見る
+    umbilical database --path artifacts/<repository id>
+
+    # 成果物を更新する
+    umbilical database --path artifacts/<rpository id> --data '{ "gs_url" : "gs://artifacts_path }'
+  `)
+  .option("--path <path>", "データのパス")
+  .option("--data <data>", "json string. ex) {gs_url: 'path to artifacts'}", JSON.parse)
+  .option("--key_file_path <path>", "firebase の service account の key file へのパス")
+  .action( (options) => {
+    database.exec(options)
+  })
+
+program
+  .command("push")
+  .description(`指定されたパスの Realtime Database にデータを push します.
+    push に成功した場合は、 push を行ったときのキーを標準出力に表示します
+    標準出力に push したキーを表示します.
+
+    # ログファイルを push する
+    umbilical push --path artifacts/<repository id>/log --data 'log.txt'
+  `)
+  .option("--path <path>", "データのパス")
+  .option("--data <data>", "push するデータ. 文字列や json を指定することができます")
+  .option("--key_file_path <path>", "firebase の service account の key file へのパス")
+  .action(options => {
+    database.push(options)
+  })
+
+
+
+program.parse(process.argv)
+
+if (!program.args.length) {
+  program.help()
+}

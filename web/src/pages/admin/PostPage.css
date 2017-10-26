@@ -1,0 +1,46 @@
+.PostPage .left,
+.PostPage .right {
+  width: 50%;
+  min-height: 100%;
+}
+
+.PostPage .left textarea {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 90%;
+  line-height: 1.5;
+}
+
+.PostPage .right .Markdown {
+  padding: 1em;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.03);
+  min-height: 100%;
+}
+
+.PostPage .content {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-height: 30em;
+}
+
+.PostPage .page-select {
+  margin: 1em 0;
+}
+
+.PostPage .Markdown code {
+  font-family: Consolas, monospace;
+  font-size: 85%;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.3em 0.3em;
+  border-radius: 2px;
+}
+
+.PostPage .Markdown pre code {
+  padding: 1em 1em;
+}

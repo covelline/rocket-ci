@@ -1,0 +1,22 @@
+.button.big-sign-up {
+  color: #2781f9;
+  padding: 0.8em 1.7em;
+  border-radius: 9999px;
+  font-size: 100%;
+  margin-left: 0;
+}
+
+.button.big-sign-up:hover {
+  background: #2781f9;
+  color: #2781f9;
+  color: white;
+  opacity: 1;
+}
+
+.IndexPage .description {
+    margin: 2em;
+    padding: 1em 2em;
+    max-width: 40em;
+    border: 1px solid #f9d527;
+    background: rgba(249, 213, 39, 0.08);
+}

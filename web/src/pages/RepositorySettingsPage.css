@@ -1,0 +1,12 @@
+.Environments input {
+  margin-right: 2em;
+  font-size: 100%
+}
+
+.Environments input[name="name"] {
+  width: 10em;
+}
+
+.Environments input[name="value"] {
+  width: 20em;
+}

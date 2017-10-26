@@ -1,0 +1,52 @@
+.App {
+  padding-top: 4em;
+}
+
+#content>div {
+  max-width: 70em;
+  margin: 0 auto 4em auto;
+  width: 90%;
+  padding-top: 3em;
+  overflow: hidden;
+}
+
+#content>div>h2 {
+  font-size: 250%;
+}
+
+/* react-notify-toast */
+
+#notification-wrapper {
+  z-index: 9999;
+  position: absolute;
+}
+
+.toast-notification>span {
+  display: inline-block !important;
+}
+
+.toast-notification {
+  top: -108px !important;
+}
+
+/* MarkdownPage */
+
+#content>.GuidePage {
+  max-width: 50em;
+}
+
+.GuidePage .Markdown code {
+  font-family: Consolas, monospace;
+  font-size: 85%;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.3em 0.3em;
+  border-radius: 2px;
+}
+
+.GuidePage .Markdown pre code {
+  padding: 1em 1em;
+}
+
+#content>.MilestonesPage {
+  max-width: 50em;
+}

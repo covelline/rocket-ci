@@ -1,0 +1,45 @@
+{
+  "name": "management-server",
+  "description": "ビルドをトリガーするやつ",
+  "version": "0.0.21",
+  "private": true,
+  "license": "Covelline Closed",
+  "author": "covelline,llc",
+  "scripts": {
+    "start": "DISABLE_CLOUD_LOGGING='' FIREBASE_DATABASE_URL='https://rocket-ci.firebaseio.com' FIREBASE_SERVICE_ACCOUNT_PATH='cred/trigger-build.json' node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "./deploy.sh",
+    "lint": "eslint **/*.js",
+    "test": "DISABLE_CLOUD_LOGGING='' FIREBASE_DATABASE_URL='ws://127.0.1:5000' mocha --timeout 10000 --recursive",
+    "watch:test": "DISABLE_CLOUD_LOGGING='' FIREBASE_DATABASE_URL='ws://127.0.1:5000' mocha --watch --timeout 10000 --recursive"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "async-if-else": "^1.1.1",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "create-error-class": "^3.0.2",
+    "dateformat": "^1.0.12",
+    "debug": "^2.3.2",
+    "es6-promisify": "^5.0.0",
+    "express": "^4.13.4",
+    "express-x-hub": "^1.0.4",
+    "firebase": "^3.4.0",
+    "github": "^3.1.1",
+    "google-cloud": "^0.43.0",
+    "json-stringify-safe": "^5.0.1",
+    "lodash": "^4.16.6",
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "crypto": "0.0.3",
+    "eslint": "^3.6.1",
+    "firebase-server": "^0.7.0",
+    "mocha": "^3.1.0",
+    "nodemon": "^1.10.2",
+    "proxyquire": "^1.7.10",
+    "supertest": "^2.0.0",
+    "request": "^2.76.0"
+  }
+}

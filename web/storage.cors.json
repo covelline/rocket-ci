@@ -1,0 +1,11 @@
+[
+  {
+    "origin": [
+      "http://localhost:*",
+      "https://rocket-ci.com"
+    ],
+    "responseHeader": ["Content-Type"],
+    "method": ["GET"],
+    "maxAgeSeconds": 3600
+  }
+]

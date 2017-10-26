@@ -1,0 +1,22 @@
+{
+  "name": "umbilical",
+  "version": "1.0.0",
+  "description": "rocket と firebase を接続するから umbilical。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "archive": "zip -r archive.zip bin lib cred package.json",
+    "lint": "eslint **/*.js"
+  },
+  "bin": "bin/umbilical",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "firebase-admin": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.0"
+  }
+}

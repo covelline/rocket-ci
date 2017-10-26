@@ -1,0 +1,108 @@
+.BuildsPage>.container {
+  display: flex;
+}
+
+.BuildsPage .left {
+  width: 25%;
+  box-sizing: border-box;
+  border-right: 1px solid #d6d6d6;
+}
+
+.BuildsPage .right {
+  width: 75%;
+  box-sizing: border-box;
+  padding-left: 3em
+}
+
+.RepoDetail header {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.RepoDetail header h1 {
+  margin-top: 0;
+  font-size: 160%;
+}
+
+.RepoDetail header .settings {
+  display: inline-block;
+  margin-bottom: 1em;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.BuildsPage {
+  overflow: hidden;
+  position: relative;
+}
+
+.RepoDetail header .language {
+  font-size: 80%;
+  background: rgba(0, 0, 0, 0.04);
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+}
+
+.BuildItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+.BuildItem a {
+  margin-bottom: 2em;
+  border-left: 2px solid;
+  padding: 0 1em;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  color: black;
+}
+
+.BuildItem a:hover {
+  opacity: 1;
+}
+
+.BuildItem:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.BuildItem.pending a {
+  border-color: #2781f9;
+  animation: blink-border-color 1.2s ease-in infinite alternate;
+}
+
+.BuildItem.failure a {
+  border-color: #F92E27;
+}
+
+.BuildItem.success a {
+  border-color: #13E879;
+}
+
+.BuildItem.error a {
+  border-color: #f9d527;
+}
+
+@keyframes blink-border-color {
+  to { border-color: transparent; }
+}
+
+.BuildsPage .RepoItems {
+  margin: 0;
+}
+
+.BuildsPage .RepoItems li {
+  padding: 0.8em 1em;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  border-radius: 4px 0 0 4px;
+}
+
+.BuildsPage .RepoItems li:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.BuildsPage .RepoItems li.selected {
+  font-weight: bold;
+}

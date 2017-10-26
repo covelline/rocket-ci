@@ -1,0 +1,15 @@
+.BuildLog {
+  font-family: Consolas, monospace;
+  padding: 1em;
+  font-size: 80%;
+  background: rgba(0, 0, 0, 0.03);
+  overflow-x: scroll;
+}
+
+.BuildLog .line {
+  margin: 0;
+}
+
+.BuildLog .line.INFO {
+  color: rgba(0, 0, 0, 0.7);
+}

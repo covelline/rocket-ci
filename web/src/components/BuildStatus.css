@@ -1,0 +1,23 @@
+.BuildStatus {
+  color: white;
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.BuildStatus.failed {
+  background: #f92e27;
+}
+
+.BuildStatus.success {
+  background: #13e879;
+}
+
+.BuildStatus.pending {
+  background: #bfbfbf;
+}
+
+.BuildStatus.error {
+  background: #f9d527;
+}

@@ -1,0 +1,62 @@
+.ConsoleToolbar .filter {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 1em;
+}
+
+.ConsoleToolbar .filter li {
+  float: left;
+  padding: 1em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  user-select: none;
+}
+
+.ConsoleToolbar .filter li:hover {
+  opacity: 0.5;
+}
+
+.ConsoleToolbar .filter li.selected {
+  border-color: #000000;
+}
+
+.ConsoleArtifact {
+  float: left;
+  width: 11em;
+  border: 1px solid #e8e8e8;
+  margin: 1em;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 80%;
+  overflow: hidden;
+  height: 12em;
+}
+
+.ConsoleArtifact p {
+  margin: 0;
+}
+
+.ConsoleArtifact .gs_url {
+  display: none;
+}
+
+.ConsoleArtifact .hash {
+  display: none;
+}
+
+.ConsoleArtifact .repository_id {
+  display: none;
+}
+
+.ConsoleArtifact .BuildStatus {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.ConsoleArtifact .repo-name {
+  font-weight: bold;
+  word-break: break-all;
+}

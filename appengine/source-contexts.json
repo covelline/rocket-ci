@@ -1,0 +1,1 @@
+[{"labels": {"category": "remote_repo"}, "context": {"git": {"url": "git@github.com:numa08/rocket-ci.com.git", "revisionId": "c40ca3e4592ade4ac26552c316769eabef38ab7c"}}}, {"labels": {"category": "remote_repo"}, "context": {"git": {"url": "git@github.com:covelline/rocket-ci.com.git", "revisionId": "c40ca3e4592ade4ac26552c316769eabef38ab7c"}}}]

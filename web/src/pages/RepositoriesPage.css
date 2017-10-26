@@ -1,0 +1,38 @@
+.RepoItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+.RepoItem {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  height: 4em;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.RepoItem button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5em;
+}
+
+.RepoItem:hover {
+  border-color: black;
+}
+
+.RepoItem .title {
+  vertical-align: baseline;
+  margin-top: 0.7em;
+}
+
+.RepoItem .private {
+  display: inline-block;
+  margin-left: 1em;
+  font-weight: normal;
+  font-size: 50%;
+  background: #ffefc6;
+  padding: 0em 0.4em;
+  border-radius: 3px;
+}
